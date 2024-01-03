@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,500;0,800;1,400&display=swap");
+
+/* colors */
+:root {
+  --primary-bg: #111;
+  --white: #ffffff;
+  --powder-blue: #1da1f2;
+  --primary-col: #d9d9d9;
+  --primary-light-col: #a6a6a6;
+  --muted-text: #969696;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--primary-bg);
+  font-family: monospace;
+  color: var(--white);
+  font-size: 20px;
+}
+
+/* others */
+.muted {
+  color: var(--muted-text);
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  box-sizing: border-box;
+  background-color: #0000004f;
+  color: var(--primary-col);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+.nav-btn {
+  background-color: transparent;
+  border: none;
+  color: var(--white);
+  width: 24px;
+  height: 24px;
+}
+.nav-list {
+  list-style-type: none;
+}
+.nav-item {
+  display: inline-block;
+  padding: 0 1rem;
+}
+#nav-brand {
+  text-transform: lowercase;
+  color: inherit;
+  font-size: 1.2em;
+  font-family: "Fira Code", Courier Prime, monospace;
+  word-spacing: 5px;
+  letter-spacing: 1.5px;
+  position: relative;
+}
+#nav-brand::before {
+  content: "@";
+}
+#nav-brand::after {
+  content: "@krishnamodepalli";
+  position: absolute;
+  color: var(--powder-blue);
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 0;
+  transition: all 400ms linear;
+}
+#nav-brand:hover::after {
+  width: 100%;
+}
+.drop-down {
+  position: fixed;
+  top: 3.6rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #000000be;
+  transition: all ease-in-out 500ms;
+  backdrop-filter: blur(6px);
+}
+.drop-down a {
+  display: block;
+  padding: 1rem 3rem;
+}
+.dd-hide {
+  top: -5rem;
+}
+
+/* LINKS */
+.links {
+  text-decoration: none;
+  color: var(--primary-light-col);
+}
+.links:hover {
+  color: var(--primary-col);
+}
+
+/* MAIN */
+main {
+  width: min(80vw, 1200px);
+  margin: auto;
+}
+main section {
+  min-height: 100vh;
+}
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.intro .name {
+  font-size: 5rem;
+  font-family: "Fira Code";
+  color: var(--primary-col);
+}
+section > :first-child {
+  color: var(--primary-light-col);
+}
+.intro div article {
+  color: #1da0f2c0;
+  max-width: max(48vw, 30rem);
+}
+
+#projs {
+}
+#projs h1 {
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
+  text-decoration: underline;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+#projs ol li {
+  padding: 1rem;
+}
+.ext-links {
+  color: var(--primary-col);
+}
+.ext-links:hover {
+  text-decoration: underline;
+}
+.underline {
+  text-decoration: underline;
+}
+.socio-icons {
+  color: var(--primary-bg);
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--primary-col);
+  color: #000;
+  text-align: center;
+  padding: 1rem;
+  line-height: 2rem;
+}
+footer::selection {
+  background-color: var(--powder-blue);
+}
+footer > .footer-details {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+div.footer-box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.footer-box a {
+  color: black;
+  text-decoration: none;
+}
+.footer-box a::after {
+  content: "";
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 2000px) {
+  .nav-btn {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  .nav-btn {
+    display: inline;
+  }
+  .nav-list {
+    display: none;
+  }
+}
+@media (min-width: 1000px) {
+  .drop-down {
+    top: -5rem;
+  }
+}

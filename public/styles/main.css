@@ -18,7 +18,8 @@
 }
 body {
   background-color: var(--primary-bg);
-  font-family: monospace;
+  font-family: "JetBrains Mono", "Courier New", Courier, monospace;
+  /* font-family: monospace; */
   color: var(--white);
   font-size: 20px;
 }
@@ -29,6 +30,13 @@ body {
 }
 .rule {
   border-top: 1px solid var(--primary-col);
+}
+.dev-stage::after {
+  content: "*";
+  color: red;
+  font-size: 0.8em;
+  position: relative;
+  top: -7px;
 }
 
 /* NAVBAR */
@@ -44,6 +52,7 @@ nav {
   left: 0;
   backdrop-filter: blur(10px);
   z-index: 1;
+  transition: all 300ms ease-in-out;
 }
 .nav-btn {
   background-color: transparent;
@@ -101,7 +110,7 @@ nav {
   padding: 1rem 3rem;
 }
 .dd-hide {
-  top: -5rem;
+  top: -10rem;
 }
 
 /* LINKS */
@@ -149,6 +158,10 @@ section > :first-child {
 }
 #projs ol li {
   padding: 1rem;
+}
+.proj-title {
+  font-size: 1.1em;
+  color: var(--primary-col);
 }
 .ext-links {
   color: var(--primary-col);
@@ -202,6 +215,9 @@ div.footer-box {
   }
 }
 @media (max-width: 1000px) {
+  nav {
+    padding: 1rem 3rem;
+  }
   .nav-btn {
     display: inline;
   }
@@ -211,6 +227,6 @@ div.footer-box {
 }
 @media (min-width: 1000px) {
   .drop-down {
-    top: -5rem;
+    top: -10rem;
   }
 }

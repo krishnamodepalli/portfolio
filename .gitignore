@@ -3,6 +3,10 @@
 # command files
 commands
 
+# IDS's & code editors
+.vscode/
+.idea/
+
 # dependencies
 /node_modules
 /.pnp

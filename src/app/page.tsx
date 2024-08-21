@@ -100,8 +100,9 @@ const Home = () => {
               LinkedIn
             </a>
             <a
-              href="https://linkedin.com/in/krishnamodepalli"
-              className="footer-link inline-flex items-center justify-center text-ts gap-1 font-semibold rounded-md my-2 px-2 hover:text-tp"
+              href="https://leetcode.com/krshn02"
+              target="_blank"
+              className="footer-link my-2 inline-flex items-center justify-center gap-1 rounded-md px-2 font-semibold text-ts hover:text-tp"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -15,7 +15,7 @@ const ErrorPage = () => {
           Sorry Mate
         </h1>
         <p className={`text-center text-2xl text-ts ${montserrat.className}`}>
-          Ya hangin' around tha 'rong place mate.
+          Ya hangin&apos; around tha &apos;rong place mate.
         </p>
       </div>
       <div

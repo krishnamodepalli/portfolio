@@ -8,16 +8,31 @@
   box-sizing: border-box;
 }
 
+/* If no color-scheme is preferred */
 :root {
   --primary-bg: #ebebeb;
   --primary-text: #232323;
 
   --skyblue: #98a6d4;
+
   body {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
     transition: 300ms background-color ease-in-out;
   }
 }
 
+/* Light mode scheme */
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-bg: #ebebeb;
+    --primary-text: #232323;
+    --secondary-text: #494949;
+    --secondary-extra-text-text: #373737;
+  }
+}
+
+/* Dark mode scheme */
 @media (prefers-color-scheme: dark) {
   :root {
     --primary-bg: #191716;

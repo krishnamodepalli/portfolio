@@ -1,6 +1,6 @@
-import Image from "next/image";
+import { nunito, jetbrains, raleway } from "@/app/_fonts";
 
-import { nunito, raleway, jetbrains } from "@/app/_fonts";
+import FooterLink from "@/components/ui/FooterLink";
 
 const Home = () => {
   return (
@@ -56,10 +56,7 @@ const Home = () => {
             <span className="uppercase footer-link my-2 pointer-events-none cursor-pointer font-bold">
               krishnamodepalli
             </span>
-            <a
-              href="#"
-              className="footer-link flex text-ts gap-1 font-semibold rounded-md my-2 px-2"
-            >
+            <FooterLink href="#">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={17}
@@ -68,51 +65,49 @@ const Home = () => {
                 <path d="M320 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160zm156.8-48C462 361 397.4 416 320 416s-142-55-156.8-128L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l131.2 0C178 151 242.6 96 320 96s142 55 156.8 128L608 224c17.7 0 32 14.3 32 32s-14.3 32-32 32l-131.2 0z" />
               </svg>
               v1.2.0
-            </a>
+            </FooterLink>
           </div>
+
           <div className="right flex gap-2 text-[0.7rem] text-ts">
-            <a
-              href="https://twitter.com/krishnamodepal"
-              target="_blank"
-              className="footer-link inline-flex items-center justify-center text-ts gap-1 font-semibold rounded-md my-2 px-2 hover:text-tp"
-            >
+            <FooterLink href="https://twitter.com/krishnamodepal">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width={15}
-                viewBox="0 0 512 512"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-twitter"
+                viewBox="0 0 16 16"
               >
-                <path d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z" />
+                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
               </svg>
               Twitter
-            </a>
-            <a
-              href="https://linkedin.com/in/krishnamodepalli"
-              target="_blank"
-              className="footer-link inline-flex items-center justify-center text-ts gap-1 font-semibold rounded-md my-2 px-2 hover:text-tp"
-            >
+            </FooterLink>
+            <FooterLink href="https://linkedin.com/in/krishnamodepalli">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width={15}
-                viewBox="0 0 448 512"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-linkedin"
+                viewBox="0 0 16 16"
               >
-                <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
               </svg>
               LinkedIn
-            </a>
-            <a
-              href="https://leetcode.com/krshn02"
-              target="_blank"
-              className="footer-link my-2 inline-flex items-center justify-center gap-1 rounded-md px-2 font-semibold text-ts hover:text-tp"
-            >
+            </FooterLink>
+            <FooterLink href="https://github.com/krishnamodepalli">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width={17}
-                viewBox="0 0 640 512"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-github"
+                viewBox="0 0 16 16"
               >
-                <path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z" />
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
               </svg>
               GitHub
-            </a>
+            </FooterLink>
           </div>
         </div>
       </footer>

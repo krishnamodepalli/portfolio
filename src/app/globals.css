@@ -25,10 +25,12 @@
 /* Light mode scheme */
 @media (prefers-color-scheme: light) {
   :root {
-    --primary-bg: #ebebeb;
+    --primary-bg: #edf5fd;
     --primary-text: #232323;
-    --secondary-text: #494949;
-    --secondary-extra-text-text: #373737;
+    --secondary-text: #5b5b5b;
+    --secondary-extra-text: #303030;
+
+    --skyblue: #6f83c3;
   }
 }
 
@@ -59,5 +61,6 @@ footer {
     svg {
       fill: var(--secondary-extra-text);
     }
+    /* This is the only place where we are currently using the --secondary-extra-text */
   }
 }

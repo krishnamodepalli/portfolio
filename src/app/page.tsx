@@ -5,23 +5,18 @@ import FooterLink from "@/components/ui/FooterLink";
 const Home = () => {
   return (
     <div
-      className={`max-w-[1000px] mx-10 lg:m-auto ${raleway.className}`}
+      className={`mx-10 max-w-[1000px] lg:m-auto ${raleway.className}`}
       id="_portfolio"
     >
-      <header className="flex justify-between my-4 lg:my-12 lg:mt-6">
+      <header className="my-4 flex justify-between lg:my-12 lg:mt-6">
         <div id="left"></div>
         <div id="right">
           <ul
             className={`flex justify-start text-ts ${jetbrains.className} list-none`}
           >
-            <li className="text-[1.5rem] mx-4">
-              <a href="#" className="hover:text-tp transition-all no-underline">
-                Blogs
-              </a>
-            </li>
-            <li className="text-[1.5rem] mx-4">
-              <a href="#" className="hover:text-tp transition-all no-underline">
-                Resume
+            <li className="mx-4 text-[1.5rem]">
+              <a href="#" className="no-underline transition-all hover:text-tp">
+                Blog
               </a>
             </li>
           </ul>
@@ -33,11 +28,11 @@ const Home = () => {
           <p className={`text-3xl text-ts ${jetbrains.className}`}>I am</p>
           <span
             id="name"
-            className={`text-[4rem] my-3 lg:mb-12 inline-block lg:text-[5rem] font-semibold text-skyblue ${jetbrains.className}`}
+            className={`my-3 inline-block text-[4rem] font-semibold text-skyblue lg:mb-12 lg:text-[5rem] ${jetbrains.className}`}
           >
             Krishna Modepalli
           </span>
-          <p className="text-xl leading-8 text-justify tracking-wider text-ts">
+          <p className="text-justify text-lg leading-8 tracking-wider text-ts lg:text-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
             voluptas fuga quas exercitationem alias voluptate vitae rerum
             deleniti. Natus dolore temporibus consectetur illum nesciunt
@@ -50,10 +45,10 @@ const Home = () => {
       </section>
       <footer>
         <div
-          className={`flex justify-between align-middle lg:mx-6 ${jetbrains.className}`}
+          className={`flex flex-col align-middle lg:mx-0 lg:flex-row lg:justify-between ${jetbrains.className}`}
         >
           <div className="left flex gap-2 text-[0.7rem] text-ts">
-            <span className="uppercase footer-link my-2 pointer-events-none cursor-pointer font-bold">
+            <span className="footer-link pointer-events-none my-2 cursor-pointer px-2 font-bold uppercase">
               krishnamodepalli
             </span>
             <FooterLink href="#">

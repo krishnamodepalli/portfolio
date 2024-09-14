@@ -21,7 +21,10 @@ const Home = async () => {
             className={`flex justify-start text-ts ${jetbrains.className} list-none`}
           >
             <li className="mx-4 text-[1.5rem]">
-              <a href="#" className="no-underline transition-all hover:text-tp">
+              <a
+                href="#"
+                className="no-underline transition-all duration-300 hover:text-tp"
+              >
                 Blog
               </a>
             </li>
@@ -29,25 +32,47 @@ const Home = async () => {
         </div>
       </header>
 
-      <section id="hero" className="min-h-[90vh] pt-4 lg:pt-20">
+      <section
+        id="hero"
+        className="relative h-[90vh] min-h-[700px] pt-4 lg:pt-20"
+      >
         {/* We will divide into sections */}
         <article id="intro" className="text-left">
           <p className={`text-3xl text-ts ${jetbrains.className}`}>I am</p>
-          <span
-            id="name"
-            className={`my-3 inline-block text-[4rem] font-semibold text-skyblue lg:mb-12 lg:text-[5rem] ${jetbrains.className}`}
-          >
-            Krishna Modepalli
-          </span>
-          <p className="text-justify text-lg leading-8 tracking-wider text-ts lg:text-2xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-            voluptas fuga quas exercitationem alias voluptate vitae rerum
-            deleniti. Natus dolore temporibus consectetur illum nesciunt
-            exercitationem vitae nam, officia harum. Odit ad eos vero cumque,
-            consectetur doloribus necessitatibus adipisci voluptatum
-            voluptatibus sit illum accusamus animi! Incidunt nam veniam libero
-            blanditiis ducimus.
+          <div className="relative mb-12 lg:mb-24">
+            <span
+              id="name"
+              className={`my-2 inline-block text-[4rem] font-semibold text-skyblue lg:text-[5rem] ${jetbrains.className}`}
+            >
+              Krishna Modepalli
+            </span>
+            <p
+              id="tagline"
+              className="text-right text-sm leading-8 tracking-wider text-tp lg:text-lg"
+            >
+              I populate the web with dust and sometime colors.
+            </p>
+          </div>
+          <p className="mb-6 leading-8 tracking-wider text-ts md:text-lg lg:text-2xl">
+            Full Stack Developer, from INDIA. I develop quality, reliable Web
+            Applications for the internet. I support and encourage{" "}
+            <span className="text-nowrap text-tp">Open-Source</span> Software
+            and I&apos;m open for any suggestions.
           </p>
+          <p className="mb-6 leading-8 tracking-wider text-ts md:text-lg lg:text-2xl">
+            I mostly play <span className="text-tp">Cricket</span> in my free
+            time. I play video games, hang out with my friends or family in the
+            weekends.
+          </p>
+          <h2
+            className={`${jetbrains.className} absolute bottom-4 w-full text-center text-lg text-ts lg:bottom-20 lg:text-2xl`}
+          >
+            <span title="By The Way">BTW</span>, I&apos;m a{" "}
+            <code className={`${jetbrains.className} bg-dim rounded-md px-1`}>
+              backend
+            </code>{" "}
+            Guy!!
+          </h2>
         </article>
       </section>
       <section id="projects" className="min-h-[90vh] pb-8 pt-4">
@@ -69,16 +94,17 @@ const Home = async () => {
       </section>
       <section id="work" className="min-h-[90vh] pb-8 pt-4">
         <h1
-          className={`mb-20 text-center text-[3rem] font-black leading-relaxed text-skyblue ${montserrat.className}`}
+          className={`mb-12 text-center text-2xl font-black leading-normal text-skyblue md:text-4xl lg:mb-20 lg:text-[3rem] lg:leading-relaxed ${montserrat.className}`}
         >
           I am open for <span className="text-nowrap">Free-Lancing</span> and{" "}
           <span className="text-nowrap">Open-Source</span> Contributions
         </h1>
-        <p className="mb-6 text-justify text-lg leading-8 tracking-wider text-ts lg:text-2xl">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus,
-          officiis laborum aliquid quod fuga ex.
+        <p className="mb-6 text-justify leading-8 tracking-wider text-ts md:text-lg lg:text-2xl">
+          I believe that only <span className="text-nowrap">Open-Source</span>{" "}
+          can bring the <span className="text-tp">True Revolution</span> in the
+          Software Industry. I love to contribute, even if it&apos;s the least.
         </p>
-        <p className="mb-6 text-justify text-lg leading-8 tracking-wider text-ts lg:text-2xl">
+        <p className="mb-6 text-justify leading-8 tracking-wider text-ts md:text-lg lg:text-2xl">
           Please contact me via.{" "}
           <Link
             href="https://github.com/krishnamodepalli"
@@ -92,14 +118,21 @@ const Home = async () => {
             className="mx-1 border-b border-dashed text-tp"
           >
             Email
-          </Link>.
+          </Link>
+          .
         </p>
         <div className="mt-20">
-          <h3 className="text-4xl mb-4 tracking-wider">Interested Domains:</h3>
+          <h3 className="mb-4 text-4xl tracking-wider">Interested Domains:</h3>
           <ul className="ml-4 list-disc">
-            <li className="text-lg lg:text-2xl text-ts tracking-wider my-1">Full-Stack Web Applications</li>
-            <li className="text-lg lg:text-2xl text-ts tracking-wider my-1">ReactJS, NextJS, RESTFul API's with ExpressJS</li>
-            <li className="text-lg lg:text-2xl text-ts tracking-wider my-1">Bash Automation Projects</li>
+            <li className="my-1 tracking-wider text-ts md:text-lg lg:text-2xl">
+              Full-Stack Web Applications
+            </li>
+            <li className="my-1 tracking-wider text-ts md:text-lg lg:text-2xl">
+              ReactJS, NextJS, RESTFul API's with ExpressJS
+            </li>
+            <li className="my-1 tracking-wider text-ts md:text-lg lg:text-2xl">
+              Bash Automation Projects
+            </li>
           </ul>
         </div>
       </section>

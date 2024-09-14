@@ -12,6 +12,7 @@ const config: Config = {
         backg: "var(--primary-bg)",
         tp: "var(--primary-text)",
         ts: "var(--secondary-text)",
+        dim: "var(--dim-text)",
 
         skyblue: "var(--skyblue)",
       }

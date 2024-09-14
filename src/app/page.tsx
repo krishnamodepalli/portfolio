@@ -128,7 +128,7 @@ const Home = async () => {
               Full-Stack Web Applications
             </li>
             <li className="my-1 tracking-wider text-ts md:text-lg lg:text-2xl">
-              ReactJS, NextJS, RESTFul API's with ExpressJS
+              ReactJS, NextJS, RESTFul API&apos;s with ExpressJS
             </li>
             <li className="my-1 tracking-wider text-ts md:text-lg lg:text-2xl">
               Bash Automation Projects

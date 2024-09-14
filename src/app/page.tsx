@@ -1,8 +1,14 @@
-import { nunito, jetbrains, raleway } from "@/app/_fonts";
+import { nunito, jetbrains, raleway, montserrat } from "@/app/_fonts";
 
+import ProjectCard from "@/components/ui/ProjectCard";
 import FooterLink from "@/components/ui/FooterLink";
 
-const Home = () => {
+import getProjects from "./_lib/get-projects";
+import Link from "next/link";
+
+const Home = async () => {
+  const projs = await getProjects();
+
   return (
     <div
       className={`mx-10 max-w-[1000px] lg:m-auto ${raleway.className}`}
@@ -22,7 +28,8 @@ const Home = () => {
           </ul>
         </div>
       </header>
-      <section id="hero" className="min-h-[85vh] pt-4 lg:pt-20">
+
+      <section id="hero" className="min-h-[90vh] pt-4 lg:pt-20">
         {/* We will divide into sections */}
         <article id="intro" className="text-left">
           <p className={`text-3xl text-ts ${jetbrains.className}`}>I am</p>
@@ -32,7 +39,7 @@ const Home = () => {
           >
             Krishna Modepalli
           </span>
-          <p className="text-justify text-lg leading-8 tracking-wider text-ts lg:text-xl">
+          <p className="text-justify text-lg leading-8 tracking-wider text-ts lg:text-2xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
             voluptas fuga quas exercitationem alias voluptate vitae rerum
             deleniti. Natus dolore temporibus consectetur illum nesciunt
@@ -43,6 +50,60 @@ const Home = () => {
           </p>
         </article>
       </section>
+      <section id="projects" className="min-h-[90vh] pb-8 pt-4">
+        <h1 className="mb-20 text-3xl font-bold leading-3 tracking-wider text-tp">
+          My Recent Projects
+        </h1>
+        <div className="relative my-8 flex flex-row flex-wrap justify-between px-4">
+          {projs &&
+            projs.map((proj) => (
+              <Link key={proj.id} className="contents" href={proj.URI}>
+                <ProjectCard
+                  banner={proj.banner}
+                  title={proj.title}
+                  content={proj.content}
+                />
+              </Link>
+            ))}
+        </div>
+      </section>
+      <section id="work" className="min-h-[90vh] pb-8 pt-4">
+        <h1
+          className={`mb-20 text-center text-[3rem] font-black leading-relaxed text-skyblue ${montserrat.className}`}
+        >
+          I am open for <span className="text-nowrap">Free-Lancing</span> and{" "}
+          <span className="text-nowrap">Open-Source</span> Contributions
+        </h1>
+        <p className="mb-6 text-justify text-lg leading-8 tracking-wider text-ts lg:text-2xl">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus,
+          officiis laborum aliquid quod fuga ex.
+        </p>
+        <p className="mb-6 text-justify text-lg leading-8 tracking-wider text-ts lg:text-2xl">
+          Please contact me via.{" "}
+          <Link
+            href="https://github.com/krishnamodepalli"
+            className="mx-1 border-b border-dashed text-tp"
+          >
+            GitHub
+          </Link>{" "}
+          or{" "}
+          <Link
+            href="mailto:mailaboutlogin@gmail.com"
+            className="mx-1 border-b border-dashed text-tp"
+          >
+            Email
+          </Link>.
+        </p>
+        <div className="mt-20">
+          <h3 className="text-4xl mb-4 tracking-wider">Interested Domains:</h3>
+          <ul className="ml-4 list-disc">
+            <li className="text-lg lg:text-2xl text-ts tracking-wider my-1">Full-Stack Web Applications</li>
+            <li className="text-lg lg:text-2xl text-ts tracking-wider my-1">ReactJS, NextJS, RESTFul API's with ExpressJS</li>
+            <li className="text-lg lg:text-2xl text-ts tracking-wider my-1">Bash Automation Projects</li>
+          </ul>
+        </div>
+      </section>
+
       <footer>
         <div
           className={`flex flex-col align-middle lg:mx-0 lg:flex-row lg:justify-between ${jetbrains.className}`}

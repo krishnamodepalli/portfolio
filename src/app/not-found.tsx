@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { jetbrains, montserrat } from "./_fonts";
+import { montserrat } from "./_fonts";
 
-export const metadat: Metadata = {
+export const metadata: Metadata = {
   title: "Not Found",
 };
 

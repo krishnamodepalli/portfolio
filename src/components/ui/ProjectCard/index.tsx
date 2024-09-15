@@ -18,7 +18,7 @@ const ProjectCard: FC<projectCardType> = ({
         <img
           src={banner}
           alt="Project card image"
-          className="h-[200px] object-cover object-center transition-all group-hover:scale-110"
+          className="h-[200px] w-full object-fill object-center transition-all group-hover:scale-110"
         />
         <h3
           className={`${jetbrains.className} absolute bottom-0 left-0 z-10 w-full px-4 py-2 text-xl capitalize text-black opacity-70`}

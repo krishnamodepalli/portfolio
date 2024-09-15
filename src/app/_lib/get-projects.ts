@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import Project from "../_interfaces/Project";
+import { Project } from "@/app/_types";
 
 // const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 

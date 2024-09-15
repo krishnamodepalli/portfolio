@@ -4,13 +4,13 @@ import { jetbrains } from "@/app/_fonts";
 type projectCardType = {
   banner: string;
   title: string;
-  content: string;
+  description: string;
 };
 
 const ProjectCard: FC<projectCardType> = ({
   banner,
   title,
-  content,
+  description: content,
 }: projectCardType): ReactNode => {
   return (
     <div className="group my-4 flex max-w-[45%] cursor-pointer flex-col overflow-hidden rounded-xl bg-slate-200 transition-all dark:bg-neutral-800">

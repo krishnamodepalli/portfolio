@@ -1,8 +1,10 @@
-export default interface Project {
+interface Project {
   id: string;
   title: string;
-  description?: string;
+  description: string;
   content: string;
   banner: string;
   URI: string;
 }
+
+export type { Project };

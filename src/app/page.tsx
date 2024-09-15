@@ -7,7 +7,7 @@ import getProjects from "./_lib/get-projects";
 import Link from "next/link";
 
 const Home = async () => {
-  const projs = await getProjects();
+  const projects = await getProjects();
 
   return (
     <div
@@ -48,7 +48,7 @@ const Home = async () => {
             </span>
             <p
               id="tagline"
-              className="text-right text-sm leading-8 tracking-wider text-tp lg:text-lg"
+              className="text-right text-sm font-semibold leading-8 tracking-wider text-ts lg:text-lg"
             >
               I populate the web with dust and sometime colors.
             </p>
@@ -80,13 +80,13 @@ const Home = async () => {
           My Recent Projects
         </h1>
         <div className="relative my-8 flex flex-row flex-wrap justify-between px-4">
-          {projs &&
-            projs.map((proj) => (
-              <Link key={proj.id} className="contents" href={proj.URI}>
+          {projects &&
+            projects.map((project) => (
+              <Link key={project.id} className="contents" href={project.URI}>
                 <ProjectCard
-                  banner={proj.banner}
-                  title={proj.title}
-                  content={proj.content}
+                  banner={project.banner}
+                  title={project.title}
+                  description={project.description}
                 />
               </Link>
             ))}

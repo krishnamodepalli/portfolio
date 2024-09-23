@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/krishnamodepalli/portfolio/compare/v2.0.0...v2.1.0) (2024-09-23)
+
+
+### Features
+
+* Portfolio version fetch from github. ([5f8af00](https://github.com/krishnamodepalli/portfolio/commit/5f8af00ed8c28f2ed8393b1d738539769e82fa6d))
+
 # [2.0.0](https://github.com/krishnamodepalli/portfolio/compare/v1.0.0...v2.0.0) (2024-09-15)
 
 

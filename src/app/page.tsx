@@ -117,7 +117,7 @@ const Home = async () => {
           </Link>{" "}
           or{" "}
           <Link
-            href="mailto:mailaboutlogin@gmail.com"
+            href="mailto:krishnamodepalli@proton.me"
             className="mx-1 border-b border-dashed text-tp"
           >
             Email
@@ -148,7 +148,9 @@ const Home = async () => {
             <span className="footer-link pointer-events-none my-2 cursor-pointer px-2 font-bold uppercase">
               krishnamodepalli
             </span>
-            <FooterLink href={`https://github.com/krishnamodepalli/portfolio/releases/${version.version}`}>
+            <FooterLink
+              href={`https://github.com/krishnamodepalli/portfolio/releases/${version.version}`}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={17}
